@@ -1,12 +1,12 @@
 const education = [
   {
     institution: 'Universidad Americana (UAM)',
-    degree: 'Bachillerato en Ingeniería de Software',
+    degree: 'Bachelor in Software Engineering',
     period: '2022 - En curso'
   },
   {
-    institution: 'Colegio Universitario de Cartago',
-    degree: 'Diplomado en Tecnología de Información',
+    institution: 'Colegio Universitario de Cartago (CUC)',
+    degree: 'Diploma in Information Technology',
     period: '2014 - 2018'
   }
 ];
@@ -14,7 +14,7 @@ const education = [
 function Education() {
   return (
     <section id="education" className="section">
-      <h2>Educación</h2>
+      <h2>Education</h2>
       <div className="education-list">
         {education.map((edu, index) => (
           <div key={index} className="education-card">

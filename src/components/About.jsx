@@ -1,17 +1,15 @@
 function About() {
   return (
     <section id="about" className="section">
-      <h2>Sobre mí</h2>
+      <h2>About Me</h2>
       <p>
-        Desarrollador de software con sólida experiencia en .NET, JavaScript, React y SQL,
-        respaldado por años de experiencia en soporte técnico. Esta combinación me permite
-        no solo construir aplicaciones robustas y centradas en el usuario, sino también
-        anticipar y resolver eficazmente los problemas del cliente.
+        Software developer with strong expertise in .NET, JavaScript, React, and SQL, backed by years of
+        technical support experience. This unique combination allows me to not only build robust, user-focused
+        applications but also to anticipate and resolve client pain points effectively.
       </p>
       <p>
-        Fluido en español e inglés, me desenvuelvo bien en equipos colaborativos que
-        priorizan el código limpio, la mejora continua y una comprensión profunda de la
-        experiencia del usuario final.
+        Fluent in Spanish and English,I thrive in collaborative teams that prioritize clean code, continuous improvement, and a deep
+        understanding of the end-user experience.
       </p>
     </section>
   );

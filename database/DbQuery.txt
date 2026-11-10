@@ -1,0 +1,38 @@
+create database PortfolioDB
+
+
+--------------------------
+
+use PortfolioDB
+
+
+if not exists (select * from sysobjects where name='ContactMessages' and xtype='U' )
+begin 
+	CREATE TABLE ContactMessages (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Name NVARCHAR(100) NOT NULL,
+        Email NVARCHAR(150) NOT NULL,
+        Message NVARCHAR(1000) NOT NULL,
+        CreatedAt DATETIME2 NOT NULL DEFAULT SYSDATETIME()
+    );
+END
+GO
+
+---------------------------------
+CREATE OR ALTER PROCEDURE sp_InsertContactMessage
+    @Name NVARCHAR(100),
+    @Email NVARCHAR(150),
+    @Message NVARCHAR(1000)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO ContactMessages (Name, Email, Message)
+    VALUES (@Name, @Email, @Message);
+
+    -- Devuelve el mensaje recién insertado
+    SELECT Id, Name, Email, Message, CreatedAt
+    FROM ContactMessages
+    WHERE Id = SCOPE_IDENTITY();
+END
+GO
